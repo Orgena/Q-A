@@ -1,0 +1,118 @@
+body{
+    color: #333;
+    font-family: arial;
+    box-sizing: border-box
+}
+
+#overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(46,60,73,.7);  
+    z-index: 100;
+    transition: all 0.5s;
+    display: none
+}
+
+.modal-content{
+    background: #fff;
+    width: 400px;
+    height: 210px;
+    margin: 80px auto;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+    z-index: 101
+}
+
+#modal-elements{
+    width: 250px;
+    margin-top: 10px;
+    padding-top: 160px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 16px;
+   	font-weight: 600;
+}
+
+
+
+
+.container{
+    max-width: 600px;
+    height: 400px;
+    margin: 80px auto 0;
+    box-shadow: 0 0 5px #999;
+}
+.question{
+    padding: 30px;
+    border-bottom: 1px solid #dfdfdf;
+	letter-spacing: 0.5px;
+    font-size: 16px
+}
+.question span{
+    color: #7d97ad;
+    font-weight: 700;
+    font-size: 14px
+}
+.answer ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.answer ul li{
+    width: auto;
+    border-bottom: 1px solid #dfdfdf;
+    position: relative
+}
+.answer ul li:last-child{
+    border-bottom: none
+}
+.answer ul li label{
+    display: inline-block;
+    width: 100%;
+    padding: 23px;
+    box-sizing: border-box; 
+}
+
+button{
+    color: #fff;
+    border: none;
+    padding: 15px 45px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 20px auto;
+    display: block;
+    outline: none;/لما ادوس علي الزرار مايعلمش حواليه بخط ازرق/
+}
+#submit-disabled{
+    background: #7d97ad;
+    opacity: 0.7;
+    cursor: pointer
+}
+#submit-enabled{
+    background-color:#02b3e4;
+    box-shadow: 12px 15px 20px rgba(0,0,0,.1);
+    cursor: pointer;
+    transition: all 0.5s;
+}
+#submit-enabled:hover{
+    background-color:#0b91b6;
+    box-shadow:none;
+}
+.correct{box-shadow:0px 0px 0px 1px #15c26b inset;}
+
+.correct label::after{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 18px;
+    top: 20px;
+    width: 25px;
+    height: 25px;
+    background: #fff url(https://classroom.udacity.com/images/answer-correct-d7c4d.svg);
+    background-size: contain;
+    z-index: 10;
+}
